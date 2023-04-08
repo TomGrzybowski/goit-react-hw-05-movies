@@ -23,7 +23,7 @@ const MovieDetails = () => {
       }
     };
     fetchMovie();
-  }, []);
+  }, [URL]);
 
   return (
     <MovieIdContext.Provider value={movieId}>
@@ -32,6 +32,7 @@ const MovieDetails = () => {
           <img
             className={css.poster}
             src={`https://image.tmdb.org/t/p/w300${movie.poster_path}`}
+            alt="Movie poster"
           ></img>
         ) : (
           <p>Image not available</p>

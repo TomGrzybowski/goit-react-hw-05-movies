@@ -22,7 +22,7 @@ const Cast = () => {
       }
     };
     fetchMovie();
-  }, []);
+  }, [URL]);
 
   useEffect(() => {
     console.log('Reviews: ', cast);

@@ -19,7 +19,7 @@ const HomePage = () => {
       }
     };
     fetchMovies();
-  }, []);
+  }, [URL]);
 
   return (
     <div>

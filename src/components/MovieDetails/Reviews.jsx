@@ -21,7 +21,7 @@ const Reviews = () => {
       }
     };
     fetchMovie();
-  }, []);
+  }, [URL]);
 
   useEffect(() => {
     // console.log('Reviews: ', reviews[0].author);
