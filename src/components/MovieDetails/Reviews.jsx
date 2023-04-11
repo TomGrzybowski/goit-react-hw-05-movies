@@ -1,6 +1,7 @@
 import { useContext, useEffect, useState } from 'react';
 import { MovieIdContext } from './MovieDetails.jsx';
 import PropTypes from 'prop-types';
+import parse from 'html-react-parser';
 
 const Reviews = () => {
   const movieId = useContext(MovieIdContext);
@@ -34,7 +35,7 @@ const Reviews = () => {
             return (
               <article key={review.id}>
                 <h2>Author: {review.author}</h2>
-                <p>{review.content}</p>
+                <p>{parse(review.content)}</p>
               </article>
             );
           })
